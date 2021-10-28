@@ -537,6 +537,7 @@ html {
 
 .place-img-wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 .place-img-wrapper::before {
@@ -555,7 +556,6 @@ html {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
     top: 0;
 }
 
