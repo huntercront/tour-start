@@ -388,7 +388,7 @@ html {
 
 .title-h1 {
     font-weight: 900;
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 0.9;
     letter-spacing: -0.03em;
 }
@@ -433,7 +433,7 @@ html {
 .tour-link {
     margin-left: 10%;
     color: inherit;
-    margin-top: 1rem;
+    margin-top: 0.5vw;
     position: relative;
 }
 
@@ -441,7 +441,7 @@ html {
     transition: 200ms ease;
     font-weight: 500;
     transition-property: color;
-    font-size: 2vw;
+    font-size: 1.6vw;
     line-height: 0.9;
     padding-bottom: 0rem;
     margin: 0;
@@ -541,7 +541,7 @@ html {
 .select-content {
     display: flex;
     overflow: hidden;
-    margin-top: -3.5vw;
+    margin-top: -3.9vw;
 }
 
 .slide-title {
