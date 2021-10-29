@@ -513,7 +513,7 @@ html {
 }
 
 .rostov .air img {
-    animation: air 2000ms ease-in-out infinite;
+    animation: air 3200ms ease-in-out infinite;
 }
 
 @keyframes train {
