@@ -509,16 +509,16 @@ html {
 }
 
 .tver .train img {
-    animation: train 3000ms ease-in-out infinite;
+    animation: train 4000ms ease-in-out infinite;
 }
 
 .rostov .air img {
-    animation: air 3000ms ease-in-out infinite;
+    animation: air 2000ms ease-in-out infinite;
 }
 
 @keyframes train {
     0% {
-        transform: translate(110%);
+        transform: translate(50vw);
     }
     100% {
         transform: translate(-110%);
@@ -527,10 +527,10 @@ html {
 
 @keyframes air {
     0% {
-        transform: translate(50%);
+        transform: translate(50vw);
     }
     100% {
-        transform: translate(-60%);
+        transform: translate(-30vw);
     }
 }
 
@@ -709,11 +709,10 @@ html {
     flex: 0 0 14%;
     width: 14%;
     height: auto;
-    margin-top: 10%;
 }
 
 .tver-place .drow-arrow {
-    transform: rotate(-70deg) translate( 0, 2rem);
+    transform: rotate(-70deg) translate( -80%, 50%);
 }
 
 .place-cta-content {
@@ -752,6 +751,5 @@ html {
 }
 
 .rostov-place .drow-arrow {
-    transform: rotate(70deg) translate( 0, 2rem);
-    margin-top: 10%;
+    transform: rotate(70deg) translate( 100%, 50%);
 }
