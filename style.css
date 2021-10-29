@@ -541,6 +541,7 @@ html {
 .select-content {
     display: flex;
     overflow: hidden;
+    margin-top: -3.5vw;
 }
 
 .slide-title {
@@ -614,7 +615,7 @@ html {
     box-sizing: border-box;
     width: 0;
     height: 100%;
-    padding-bottom: 30%;
+    padding-bottom: 29%;
 }
 
 .place-img {
@@ -624,7 +625,7 @@ html {
     position: absolute;
     left: 0;
     width: 100%;
-    top: 0;
+    bottom: 0;
 }
 
 .place-house {
