@@ -404,8 +404,8 @@ html {
 }
 
 .link-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3vw;
+    height: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -414,10 +414,13 @@ html {
     position: absolute;
     left: 0;
     bottom: 0;
+    font-size: 1vw;
+    transition: 200ms linear;
+    transition-property: transform;
 }
 
 .link-icon img {
-    max-width: 2rem;
+    max-width: 2em;
 }
 
 .linl-wrapper,
@@ -442,7 +445,11 @@ html {
     line-height: 0.9;
     padding-bottom: 0rem;
     margin: 0;
-    padding-bottom: 4rem;
+    padding-bottom: 4vw;
+}
+
+.tour-link:hover .link-icon {
+    transform: scale(1.1);
 }
 
 .select-slider {
@@ -459,13 +466,72 @@ html {
 .slider-slide {
     flex: 0 0 50%;
     max-width: 50%;
-    transition: 500ms ease-in;
+    transition: 500ms cubic-bezier(.4, 0, .2, 1);
     transition-property: margin;
 }
 
 .select-animation {
-    flex: 0 0 50%;
+    flex: 0 0 60%;
     padding-left: 10%;
+}
+
+.select-animation-inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+    margin-right: -2rem;
+}
+
+.train,
+.air {
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.train img,
+.air img {
+    width: 200%;
+    display: none;
+    max-height: 2.5rem;
+}
+
+.train img {
+    max-height: 2.5rem;
+}
+
+.tver .train img {
+    display: block;
+}
+
+.rostov .air img {
+    display: block;
+}
+
+.tver .train img {
+    animation: train 3000ms ease-in-out infinite;
+}
+
+.rostov .air img {
+    animation: air 3000ms ease-in-out infinite;
+}
+
+@keyframes train {
+    0% {
+        transform: translate(110%);
+    }
+    100% {
+        transform: translate(-110%);
+    }
+}
+
+@keyframes air {
+    0% {
+        transform: translate(50%);
+    }
+    100% {
+        transform: translate(-60%);
+    }
 }
 
 .progress {
@@ -513,7 +579,7 @@ html {
 }
 
 .slide-text p {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
     line-height: 1.2;
     font-weight: 600;
 }
@@ -522,13 +588,14 @@ html {
     padding: 1rem;
     user-select: none;
     border-radius: 1rem;
-    cursor: pointer;
+    height: 100%;
     transition: 200ms ease-in;
-    transition-property: ;
+    transition-property: background;
 }
 
 .slider-slide:not(.active-slide) .slide-inner:hover {
     background: #F5F6FA;
+    cursor: pointer;
 }
 
 .slider-slide:not(.active-slide) .slide-inner:hover .slide-title {
@@ -538,6 +605,7 @@ html {
 .place-img-wrapper {
     position: relative;
     overflow: hidden;
+    margin-top: auto;
 }
 
 .place-img-wrapper::before {
@@ -575,11 +643,11 @@ html {
 
 .place-img.active-img {
     display: flex;
-    animation: fadaUp ease-in 600ms forwards;
+    animation: fadaUp cubic-bezier(.4, 0, .2, 1) 600ms forwards;
 }
 
 .place-img.proces {
-    animation: fadaDown ease-in 600ms forwards;
+    animation: fadaDown cubic-bezier(.4, 0, .2, 1) 600ms forwards;
 }
 
 @keyframes fadaUp {
@@ -602,4 +670,88 @@ html {
         opacity: 0;
         transform: translate(0, 80%);
     }
+}
+
+.place-cta {
+    position: absolute;
+    z-index: 20;
+    animation: fade-cta 300ms 700ms cubic-bezier(.4, 0, .2, 1) forwards;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    width: 10%;
+}
+
+@keyframes fade-cta {
+    0% {
+        transform: translate(0, 2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0rem);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.tver-place .place-cta {
+    top: 5%;
+    left: 30%;
+}
+
+.place-cta-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.drow-arrow {
+    flex: 0 0 14%;
+    width: 14%;
+    height: auto;
+    margin-top: 10%;
+}
+
+.tver-place .drow-arrow {
+    transform: rotate(-70deg) translate( 0, 2rem);
+}
+
+.place-cta-content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 85%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.cta-link-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cta-link {
+    padding: 6% 30%;
+    background: var(--main);
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    border-radius: 4rem;
+    transition: 200ms ease-in;
+    transition-property: background;
+    font-size: 1vw;
+}
+
+.cta-link:hover {
+    color: var(--white);
+    background: #8600d3;
+}
+
+.rostov-place .place-cta {
+    right: 19%;
+    top: 42%;
+}
+
+.rostov-place .drow-arrow {
+    transform: rotate(70deg) translate( 0, 2rem);
+    margin-top: 10%;
 }
